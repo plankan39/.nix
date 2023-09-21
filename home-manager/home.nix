@@ -16,6 +16,7 @@
     # ./nvim.nix
     ./git.nix
     ./gnome.nix
+    ./kitty.nix
   ];
 
   nixpkgs = {
@@ -46,7 +47,6 @@
     packages = with pkgs; [
       bitwarden
       spotify
-      kitty
       vscode
       gnumake
       nodejs

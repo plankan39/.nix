@@ -13,36 +13,21 @@ in {
         "pop-shell@system76.com"
         "native-window-placement@gnome-shell-extensions.gcampax.github.com" # works better with pop-shell
         "appindicatorsupport@rgcjonas.gmail.com"
-        "gnomebedtime@ionutbortis.gmail.com"
       ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" ];
     };
+
+    "org/gnome/desktop/interface" = { 
+      color-scheme = "prefer-dark";
+      show-battery-percentage = true;
+    };
+
     "org/gnome/shell/extensions/pop-shell" = {
       tile-by-default = true;
       snap-to-grid = true;
       smart-gaps = true;
       show-title = false;
-      active-hint = false;
-    };
-    "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
-    "org/gnome/desktop/sound" = { theme-name = "freedesktop"; };
-    "org/gnome/desktop/input-sources" = {
-      sources = map mkTuple [ [ "xkb" "gb" ] [ "ibus" "mozc-jp" ] ];
-      xkb-options = [ "compose:ralt" ];
-    };
-
-    "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Office" "Utilities" ];
-    };
-    "org/gnome/desktop/app-folders/folders/Office" = {
-      name = "Office";
-      translate = true;
-      categories = [ "Office" ];
-    };
-    "org/gnome/desktop/app-folders/folders/Utilities" = {
-      name = "Utilities";
-      translate = true;
-      categories = [ "Utility" "X-GNOME-Utilities" "System" ];
+      active-hint = true;
+      hint-color-rgba = "rgba(136, 192, 208, 0.7)";
     };
 
     # key bindings for pop-shell
@@ -74,19 +59,14 @@ in {
       move-to-workspace-down = [ ];
       move-to-workspace-up = [ ];
 
-      move-to-monitor-left = [  "<Primary><Shift><Super>Left" "<Primary><Shift><Super>${left}" ];
-      move-to-monitor-right = [ "<Primary><Shift><Super>Right" "<Primary><Shift><Super>${right}"  ];
+      move-to-monitor-left = [  "<Shift><Super>Up" "<Shift><Super>${up}" ];
+      move-to-monitor-right = [ "<Shift><Super>Down" "<Shift><Super>${down}"  ];
       move-to-monitor-up = [ ];
       move-to-monitor-down = [ ];
     };
     "org/gnome/mutter/keybindings" = {
       toggle-tiled-left = [ ];
       toggle-tiled-right = [ ];
-    };
-    "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
-      night-light-last-coordinates = mkTuple [ 53.2593 10.4 ];
-      night-light-temperature = mkUint32 3700;
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       screensaver = [ "<Super>Escape" ];
@@ -95,12 +75,6 @@ in {
       www = [ "<Super>b" ];
       terminal = [ "<Super>t" ];
       rotate-video-lock-static = [ ];
-    };
-    "org/gnome/shell/extensions/bedtime-mode" = {
-      ondemand-button-location = "menu";
-      automatic-schedule = true;
-      schedule-start-hours = 23;
-      schedule-end-hours = 6;
     };
   };
 }
