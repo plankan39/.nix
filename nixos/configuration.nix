@@ -177,6 +177,7 @@
     #media-session.enable = true;
   };
 
+  programs.zsh.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -185,6 +186,7 @@
     isNormalUser = true;
     description = "Lukas Elmlund";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
     #  thunderbird
