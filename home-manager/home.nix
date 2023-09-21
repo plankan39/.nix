@@ -44,7 +44,7 @@
 
     packages = with pkgs; [
       bitwarden
-      spotify
+#      spotify
       kitty
       vscode
       gnumake
