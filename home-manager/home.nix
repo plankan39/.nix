@@ -17,6 +17,7 @@
     ./git.nix
     ./gnome.nix
     ./kitty.nix
+    ./zsh.nix
   ];
 
   nixpkgs = {
