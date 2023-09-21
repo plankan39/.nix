@@ -47,6 +47,7 @@
       spotify
       kitty
       vscode
+      gnumake
     ];
 
     sessionVariables = {
