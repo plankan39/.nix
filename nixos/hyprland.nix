@@ -12,6 +12,7 @@
       })
     )
     pkgs.mako
+    pkgs.libnotify
   ];
 
 }

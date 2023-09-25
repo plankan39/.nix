@@ -53,6 +53,7 @@
       nodejs
       bat
       exa
+      notify-send
     ];
 
     sessionVariables = {
