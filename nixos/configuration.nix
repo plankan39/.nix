@@ -20,6 +20,7 @@
     ./hardware-configuration.nix
     ./gnome.nix
     ./hyprland.nix
+    ./fonts.nix
   ];
 
   nixpkgs = {
