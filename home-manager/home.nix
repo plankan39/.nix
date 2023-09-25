@@ -51,6 +51,8 @@
       vscode
       gnumake
       nodejs
+      bat
+      exa
     ];
 
     sessionVariables = {
