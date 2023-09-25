@@ -75,6 +75,13 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
+  
+  environment.sessionVariables = {
+    # If your cursor becomes invisible
+    #WLR_NO_HARDWARE_CURSORS = "1";
+    # Hint electron apps to use wayland
+    NIXOS_OZONE_WL = "1";
+  };
 
   hardware.nvidia = {
 
@@ -200,9 +207,7 @@
   environment.systemPackages = with pkgs; [
      neovim 
      pciutils  
-     neofetch
      home-manager
-#  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
