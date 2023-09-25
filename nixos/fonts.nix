@@ -8,6 +8,7 @@
     noto-fonts-emoji
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     fira-code
+    font-awesome
   ];
   fonts.fontconfig.defaultFonts = {
     serif = [ "Noto Serif" "emoji" ];

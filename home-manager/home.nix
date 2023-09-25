@@ -18,6 +18,8 @@
     ./gnome.nix
     ./kitty.nix
     ./zsh.nix
+    ./rbw.nix
+    ./neovim
   ];
 
   nixpkgs = {
@@ -53,7 +55,7 @@
       nodejs
       bat
       exa
-      notify-send
+      python3
     ];
 
     sessionVariables = {
@@ -67,6 +69,16 @@
 
   # Enable home-manager
   programs.home-manager.enable = true;
+
+  
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Nordic";
+      package = pkgs.nordic;
+    };
+  };
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

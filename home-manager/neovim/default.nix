@@ -14,6 +14,7 @@ in {
     viAlias = true;
     vimAlias = true;
   };
+
 }
 
 
