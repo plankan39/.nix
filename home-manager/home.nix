@@ -1,12 +1,6 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{ inputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
@@ -20,6 +14,8 @@
     ./zsh.nix
     ./rbw.nix
     ./neovim
+    ./rofi
+    ./waybar
   ];
 
   nixpkgs = {
@@ -56,11 +52,13 @@
       bat
       exa
       python3
+      zlib
+      pavucontrol
+      webcord
+      nixfmt
     ];
 
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    sessionVariables = { EDITOR = "nvim"; };
   };
 
   # Add stuff for your user as you see fit:
@@ -70,7 +68,15 @@
   # Enable home-manager
   programs.home-manager.enable = true;
 
-  
+  services.spotifyd = {
+    enable = true;
+    settings = {
+      username = "lukas.elmlund@gmail.com";
+      password = "uA@J4[M&Z?(Cf9j";
+      device_name = "green-peril";
+    };
+  };
+
   gtk = {
     enable = true;
     theme = {
@@ -79,6 +85,7 @@
     };
   };
 
+  services.blueman-applet.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

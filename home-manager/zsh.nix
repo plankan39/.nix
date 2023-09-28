@@ -2,14 +2,7 @@
 
 {
 
-
-  programs.starship = {
-    enable = true;
-    settings = {
-
-    };
-  };
-
+  programs.starship.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -25,7 +18,5 @@
     };
 
   };
-
-
 
 }

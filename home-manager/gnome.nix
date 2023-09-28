@@ -16,7 +16,7 @@ in {
       ];
     };
 
-    "org/gnome/desktop/interface" = { 
+    "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       show-battery-percentage = true;
     };
@@ -59,8 +59,8 @@ in {
       move-to-workspace-down = [ ];
       move-to-workspace-up = [ ];
 
-      move-to-monitor-left = [  "<Shift><Super>Up" "<Shift><Super>${up}" ];
-      move-to-monitor-right = [ "<Shift><Super>Down" "<Shift><Super>${down}"  ];
+      move-to-monitor-left = [ "<Shift><Super>Up" "<Shift><Super>${up}" ];
+      move-to-monitor-right = [ "<Shift><Super>Down" "<Shift><Super>${down}" ];
       move-to-monitor-up = [ ];
       move-to-monitor-down = [ ];
     };
