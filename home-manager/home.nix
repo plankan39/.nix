@@ -50,7 +50,7 @@
       gnumake
       nodejs
       bat
-      exa
+      eza
       python3
       zlib
       pavucontrol
@@ -68,6 +68,8 @@
 
   # Enable home-manager
   programs.home-manager.enable = true;
+
+
 
   services.spotifyd = {
     enable = true;
