@@ -2,7 +2,7 @@
   programs.hyprland = {
     enable = true;
     # only for nvidia
-    nvidiaPatches = true;
+    enableNvidiaPatches = true;
     xwayland.enable = true;
   };
   programs.gnupg.agent = { enable = true; };
