@@ -56,6 +56,7 @@
       pavucontrol
       webcord
       nixfmt
+      zoom-us
     ];
 
     sessionVariables = { EDITOR = "nvim"; };
