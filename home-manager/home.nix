@@ -97,6 +97,10 @@
         variant = "macchiato";
       };
     };
+    iconTheme = {
+      name = "Papirus";
+      package = pkgs.papirus-icon-theme;
+    };
   };
 
 

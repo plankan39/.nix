@@ -2,13 +2,24 @@
 
 {
 
-  programs.starship.enable = true;
-
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+  };
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     autocd = true;
     dotDir = ".config/zsh";
+
+    shellAliases = {
+      ls = "exa";
+      cat = "bat";
+      hms = "home-manager switch --flake ~/.nix#lukase@green-peril";
+      nxs = "sudo nixos-rebuild switch --flake ~/.nix#";
+
+    };
 
     zplug = {
       enable = true;

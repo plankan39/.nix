@@ -11,7 +11,6 @@
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     }))
-    pkgs.mako
     pkgs.libnotify
     pkgs.wofi
   ];
