@@ -88,16 +88,17 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Normal";
+      name = "Catppuccin";
+      #package = pkgs.catppuccin-gtk;
       package = pkgs.catppuccin-gtk.override {
         accents = [ "pink" ];
         size = "compact";
-        tweaks = ["normal"];
+        tweaks = [ ];
         variant = "macchiato";
       };
     };
   };
-}
+
 
   services.blueman-applet.enable = true;
 
