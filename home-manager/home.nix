@@ -88,12 +88,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin";
+      name = "Catppuccin-Macchiato-Compact-Blue-Dark";
       #package = pkgs.catppuccin-gtk;
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
+        accents = [ ];
         size = "compact";
-        tweaks = [ ];
+        tweaks = [ "normal" ];
         variant = "macchiato";
       };
     };
