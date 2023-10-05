@@ -13,6 +13,7 @@
     ./kitty.nix
     ./zsh.nix
     ./rbw.nix
+    ./vscode.nix
     ./neovim
     ./rofi
     ./waybar
@@ -46,7 +47,6 @@
     packages = with pkgs; [
       bitwarden
       spotify
-      vscode
       gnumake
       nodejs
       bat
@@ -57,6 +57,9 @@
       webcord
       nixfmt
       zoom-us
+      networkmanagerapplet
+      zathura
+      mpi
     ];
 
     sessionVariables = { EDITOR = "nvim"; };
