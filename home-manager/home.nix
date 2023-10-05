@@ -60,6 +60,7 @@
       networkmanagerapplet
       zathura
       mpi
+      hyprpaper
     ];
 
     sessionVariables = { EDITOR = "nvim"; };
@@ -83,13 +84,20 @@
     };
   };
 
+
   gtk = {
     enable = true;
     theme = {
-      name = "Nordic";
-      package = pkgs.nordic;
+      name = "Catppuccin-Macchiato-Compact-Normal";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "pink" ];
+        size = "compact";
+        tweaks = ["normal"];
+        variant = "macchiato";
+      };
     };
   };
+}
 
   services.blueman-applet.enable = true;
 
