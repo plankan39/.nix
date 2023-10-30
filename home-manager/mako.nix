@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.mako = {
+  services.mako = {
     enable = true;
     backgroundColor = "#303446";
     borderColor = "#8caaee";

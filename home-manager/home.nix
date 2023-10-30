@@ -14,6 +14,7 @@
     ./zsh.nix
     ./rbw.nix
     ./vscode.nix
+    ./mako.nix
     ./neovim
     ./rofi
     ./waybar

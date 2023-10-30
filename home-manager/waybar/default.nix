@@ -18,7 +18,7 @@
         # Choose the order of the modules
         modules-left = [ "custom/power" "custom/media" "clock" "cpu" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "network" "backlight" "pulseaudio" "battery" "tray" ];
+        modules-right = [ "network" "backlight" "pulseaudio" "battery" "tray" "keyboard-state" ];
 
         # Modules configuration
         "hyprland/workspaces" = {

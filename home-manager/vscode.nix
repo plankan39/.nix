@@ -5,9 +5,12 @@
     enable = true;
     userSettings = {
       "window.titleBarStyle" = "custom";
-      "editor.lineHeight" = 1.6;
+      "editor.lineHeight" = 1.8;
       "editor.fontSize" = 12;
       "workbench.colorTheme" = "Catppuccin Macchiato";
+      "editor.fontFamily" = "'Fira Code'";
+      "editor.fontLigatures" = true;
+      "catppuccin.italicKeywords" = false;
     };
     extensions = with pkgs.vscode-extensions; [
       catppuccin.catppuccin-vsc-icons

@@ -14,7 +14,7 @@
     dotDir = ".config/zsh";
 
     shellAliases = {
-      ls = "exa";
+      ls = "exa --icons";
       cat = "bat";
       hms = "home-manager switch --flake ~/.nix#lukase@green-peril";
       nxs = "sudo nixos-rebuild switch --flake ~/.nix#";

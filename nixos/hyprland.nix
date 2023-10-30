@@ -13,6 +13,7 @@
     }))
     pkgs.libnotify
     pkgs.wofi
+    pkgs.mako
   ];
 
   xdg.portal = {
